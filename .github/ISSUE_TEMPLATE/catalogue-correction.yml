@@ -1,0 +1,52 @@
+name: Catalogue correction
+description: Report outdated or incorrect public catalogue information.
+title: "Catalogue correction: "
+body:
+  - type: markdown
+    attributes:
+      value: "This report is public. Do not include passport numbers, application documents, private notes, contact details, or other personal information. Reports are reviewed before catalogue facts change."
+  - type: input
+    id: record
+    attributes:
+      label: Record ID
+      description: The identifier supplied by the catalogue.
+    validations:
+      required: true
+  - type: input
+    id: record-title
+    attributes:
+      label: Record title
+  - type: dropdown
+    id: category
+    attributes:
+      label: What needs checking?
+      options:
+        - Deadline or application cycle
+        - Eligibility or study level
+        - Funding amount or conditions
+        - Provider or application link
+        - Duplicate or incorrect association
+        - Other public catalogue information
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: Describe the problem and what the provider currently states.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official supporting source
+      placeholder: https://
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed personal information and understand this report is public.
+          required: true

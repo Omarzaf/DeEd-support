@@ -1,0 +1,17 @@
+name: Product question or concern
+description: Ask about the product, accessibility, privacy or source use.
+body:
+  - type: markdown
+    attributes:
+      value: "This report is public. Do not share private documents, personal contact details, passport information or other sensitive information."
+  - type: input
+    id: page
+    attributes:
+      label: Public page or feature
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or concern
+      description: Describe the issue and the result you expected.
+    validations:
+      required: true
